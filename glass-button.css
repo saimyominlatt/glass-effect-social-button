@@ -26,4 +26,53 @@ section::before{
 
 }
 ul{
+    position: relative;
+    display: flex;
+    z-index: 2;
+}
+ul li{
+    position: relative;
+
+    list-style: none;
+    margin: 10px;
+
+}
+li a {
+    position: relative;
+    width:80px;
+    height: 80px;
+    /*background: rgba(255,255,255,.5);*/
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,.4);
+    border-right: 1px solid rgba(255,255,255,.2);
+    border-bottom: 1px solid rgba(255,255,255,.2);
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    backdrop-filter: blur(2px);
+    color:white;
+    text-decoration: none;
+    font-size: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+    overflow: hidden;
+}
+li a:hover{
+    transform: translateY(-20px);
+}
+li a::before{
+content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 50px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    transform:skewX(45deg) translateX(150px);
+    transition: .4s;
+}
+li a:hover::before{
+    transition: .4s;
+    transform:skewX(45deg) translateX(-150px);
+
 }
